@@ -17,7 +17,6 @@ test:
   adapter: postgresql
   host: localhost
   username: user
-  password: user
   database: app-test
 
 production:
