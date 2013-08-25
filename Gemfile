@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.1'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'pg', '0.12.2'
 gem 'bcrypt-ruby', '3.0.1'
-
+gem 'turbolinks', '1.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -40,6 +40,8 @@ group :test do
 	gem 'capybara', '1.1.2'
 	gem 'rb-inotify', '0.9'
 	gem 'libnotify', '0.5.9'
+	gem 'cucumber-rails', '1.3.0', :require => false
+	gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
