@@ -1,47 +1,49 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0'
 gem 'bootstrap-sass', '2.3.2.0'
-gem 'pg', '0.12.2'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'turbolinks', '1.1.1'
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+gem 'protected_attributes'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
-	gem 'rspec-rails', '2.11.0'
-	gem 'guard-rspec', '1.2.1'
-	gem 'guard-spork', '1.2.0'
-	gem 'spork', '0.9.2'
+	gem 'pg', '0.15.1'
+	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec', '2.5.0'
+	gem 'guard-spork', '1.5.0'
+	gem 'spork-rails', github: 'sporkrb/spork-rails'
 	gem 'childprocess', '0.3.6'
-	gem 'factory_girl_rails', '4.1.0'
 end
 
-group :development do
-	gem 'annotate', '2.5.0'
+group :production do
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
 end
 
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '3.2.5'
-  gem 'coffee-rails', '3.2.2'
-  gem 'uglifier', '1.2.3'
-
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+group :doc do
+	gem 'sdoc', '0.3.2.0', require: false
 end
 
-gem 'jquery-rails', '2.0.2'
+gem 'sass-rails', '4.0.0'
+gem 'coffee-rails', '4.0.0'
+gem 'uglifier', '2.1.1'
+gem 'coffee-rails', '4.0.0'
+gem 'jquery-rails', '3.0.4'
+gem 'turbolinks', '1.1.1'
+gem 'jbuilder', '1.0.2'
 
 group :test do
-	gem 'capybara', '1.1.2'
-	gem 'rb-inotify', '0.9'
-	gem 'libnotify', '0.5.9'
-	gem 'cucumber-rails', '1.3.0', :require => false
+	gem 'selenium-webdriver', '2.35.1'
+	gem 'capybara' , '2.1.0'
+	gem 'factory_girl_rails', '4.2.0'
+	gem 'cucumber-rails', '1.4.0', :require => false
 	gem 'database_cleaner', github: 'bmabey/database_cleaner'
+	gem 'libnotify', '0.8.0'
 end
 
 # To use ActiveModel has_secure_password
