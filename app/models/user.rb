@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   
   has_secure_password
+  has_many :microposts, dependent: :destroy
   
   
   
